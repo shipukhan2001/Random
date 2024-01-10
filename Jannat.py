@@ -947,7 +947,6 @@ def zong():
     os.system('clear')
     print(logo)
     print('\33[1;31m CHOOSE CODE : 9370, 9378, 9377, 9379, 9374')
-    lines()
     kode = input(' PUT CODE : ')
     lines()
     os.system('clear')
@@ -1043,4 +1042,3 @@ def rcrack(uid,pwx,tl):
     except:
         pass
 
-zong()
