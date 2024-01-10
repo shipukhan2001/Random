@@ -12,7 +12,7 @@ A = '\x1b[38;5;248m' # Abu-Abu
 
 #--> Clear Terminal
 def clear():
-    if "linux" in sys.platform.lower():os.system('clear')
+       "if "linux" in sys.platform.lower():os.system('clear')
     elif "win" in sys.platform.lower():os.system('cls')
 
 #--> Waktu
@@ -668,5 +668,4 @@ def belum_tersedia():
 
 #--> Trigger
 if __name__ == '__main__':
-    clear()
-    menu()
+    
