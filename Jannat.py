@@ -1,15 +1,3 @@
-#--> Author's Info
-Author    = 'Dapunta Khurayra X'
-Facebook  = 'Facebook.com/Dapunta.Khurayra.X'
-Instagram = 'Instagram.com/Dapunta.Ratya'
-Whatsapp  = '082245780524'
-YouTube   = 'Youtube.com/channel/UCZqnZlJ0jfoWSnXrNEj5JHA'
-
-#--> Import Module
-import os, sys, bs4, time, datetime, requests, re, random, urllib
-from datetime import datetime
-from bs4 import BeautifulSoup as bs
-
 #--> Global Variable
 bulan = {'1':'Januari','2':'Februari','3':'Maret','4':'April','5':'Mei','6':'Juni','7':'Juli','8':'Agustus','9':'September','10':'Oktober','11':'November','12':'Desember'}
 perangkat = '; m_pixel_ratio=1.25; dpr=1.125; wd=360x780'
