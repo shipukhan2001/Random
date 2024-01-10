@@ -182,7 +182,7 @@ pcp=[]
 id=[]
 def menu():
 	
-	        os.system("espeak \"Choice Option \"")
+	        
 			
 			os.system('clear')
 			print(logo)
