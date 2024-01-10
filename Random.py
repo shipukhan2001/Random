@@ -191,7 +191,7 @@ def menu():
 			print('[3] BD  Random Cloning menu')
 			print('[4] Random Choice Pass ')
 			print('[5] Get any  number data ')
-			print('[6] Get any CNIC number data )
+			print('[6] Get any CNIC number data ')
 			print('[7] Follow me on Facebook')
 			print('\x1b[1;91m[8] Exit main menu')
 			linex()
