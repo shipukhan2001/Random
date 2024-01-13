@@ -170,7 +170,7 @@ os.system('espeak -a 300 " Welcome,   to,  Shipu Khan  Tools"')
 os.system('xdg-open https://t.me/facebook_marketing_2024')
 def banner():
 	os.system("clear")
-logo=(f'''{B}\033[0;92m
+   print("""
 :'######::'##::::'##:'####:'########::'##::::'##:
 '##... ##: ##:::: ##:. ##:: ##.... ##: ##:::: ##:
  ##:::..:: ##:::: ##:: ##:: ##:::: ##: ##:::: ##:
