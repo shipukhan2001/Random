@@ -392,7 +392,7 @@ def setting():
 		for bacot in id:
 			xx = random.randint(0,len(id2))
 			id2.insert(xx,bacot)
-	print('\x1b[1;92m LOGIN SEXY\n\x1b[1;97m [1] METHOD [Xhoda Khabi Naki] ')
+	print('\x1b[1;92m LOGIN \n\x1b[1;97m [1] METHOD ')
 	hc = input(' CHOOSE: ')
 	if hc in ['1','01']:
 		method.append('mobile')
